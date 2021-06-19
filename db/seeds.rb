@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-walker = User.create!(name:'Samuel L. Walker', username: 'ascending_to_a_higher_plane')
-jordan = User.create!(name: 'Jordan Tom', username: 'also_known_as_tom')
-ayce = User.create!(name: 'Ayce Lacap', username: 'ace_pun_repo')
-andy = User.create!(name: 'Andy Huang', username: 'chinese_half_and_half')
-mike = User.create!(name: 'Mike Madsen', username: 'madlad')
-charis = User.create!(name: 'Charis Ginn', username: 'chairs')
-jack = User.create!(name: 'Jack Egbert', username: 'get_jacked')
+User.destroy_all
+
+walker = User.create!(name:'Samuel L. Walker', username: 'ascending_to_a_higher_plane', description: 'he\'s leaving us')
+jordan = User.create!(name: 'Jordan Tom', username: 'also_known_as_tom', description: 'your new leader')
+ayce = User.create!(name: 'Ayce Lacap', username: 'ace_pun_repo', description: 'your weekend resource')
+andy = User.create!(name: 'Andy Huang', username: 'chinese_half_and_half', description: 'he crushes it')
+mike = User.create!(name: 'Mike Madsen', username: 'madlad', description: 'he is disappointed')
+charis = User.create!(name: 'Charis Ginn', username: 'chairs', description: 'she sees your discord')
+jack = User.create!(name: 'Jack Egbert', username: 'get_jacked', description: 'ole reliable')

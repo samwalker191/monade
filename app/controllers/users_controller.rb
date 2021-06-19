@@ -2,13 +2,18 @@ class UsersController < ApplicationController
   def index
     # fetch a bunch of stuff
     @users = User.all
-    render json: @users
+    render :index
   end
 
   def show
     # fetch one stuff
     @user = User.find(params[:id])
     render json: @user
+  end
+
+  def new
+    @user = User.new
+    render :new
   end
 
   def create
@@ -21,7 +26,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params) # username: 'Bubble'
 
     if @user.save
-      render json: @user
+      # render json: @user
+      # render :index
+      redirect_to users_url
     else
       render json: @user.errors.full_messages, status: 422
     end
@@ -55,6 +62,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :name)
+    params.require(:user).permit(:username, :name, :description)
   end
 end
