@@ -1,16 +1,12 @@
-<a href="<%= new_user_url %>">Create New User</a>
-
-<% @users.each do |user| %>
+<main class='users-index'>
+  <% @users.each do |user| %>
     <ul>
-        <li>
-            <%= user.name %>
-        </li>
-        <li>
-            <%= user.username %>
-        </li>
-        <li>
-            <%= user.description %>
-        </li>
+      <li><%= user.name %></li>
+      <li><%= user.username %></li>
+      <li><%= user.description %></li>
     </ul>
-<% end %>
+  <% end %>
+</main>
+
+
 

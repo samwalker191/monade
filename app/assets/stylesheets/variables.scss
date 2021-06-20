@@ -1,0 +1,13 @@
+$pink: #F8598B;
+$light-yellow: #FFFACD;
+$yellow: #FFFF9F;
+$light-orange: #F8DB81;
+$orange: #F8B37C;
+
+@mixin glass {
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: -6px 7px 20px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
