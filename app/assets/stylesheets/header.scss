@@ -11,10 +11,6 @@
   margin: 1em;
 
   h2 {
-    font-size: 2.5rem;
-    font-style: italic;
-    font-weight: bold;
-    color: $yellow;
-    text-shadow: -4px 2px 3px black;
+    @include logo;
   }
 }
