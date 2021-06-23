@@ -28,6 +28,7 @@ class UsersController < ApplicationController
     if @user.save
       # render json: @user
       # render :index
+      login!(@user)
       redirect_to users_url
     else
       render json: @user.errors.full_messages, status: 422

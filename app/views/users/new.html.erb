@@ -15,8 +15,13 @@
     </section>
 
     <section>
-      <textarea name="user[description]" id="user_description" placeholder="Please enter a description..."><%= @user.description %></textarea>
+      <div>
+        <label for="user_password">Password</label>
+        <input type="password" name="user[password]" id="user_password">
+      </div>
     </section>
+
+    <textarea name="user[description]" id="user_description" placeholder="Please enter a description..."><%= @user.description %></textarea>
 
     <input class="button" type="submit" value="Create User">
   </form>
